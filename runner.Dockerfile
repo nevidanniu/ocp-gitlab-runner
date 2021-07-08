@@ -2,7 +2,7 @@ ARG GITLAB_RUNNER_VERSION=main
 
 FROM registry.access.redhat.com/ubi8:8.4 AS builder
 
-ARG GITLAB_RUNNER_VERSION=main
+ARG GITLAB_RUNNER_VERSION
 
 #ENV GITLAB_REPO=https://gitlab.com/gitlab-org/gitlab-runner.git \
 ENV GITLAB_REPO=https://gitlab.com/nevidanniu/gitlab-runner.git \
@@ -17,7 +17,7 @@ RUN dnf install -y git-core make go ncurses && \
 
 FROM registry.access.redhat.com/ubi8-micro:8.4
 
-ARG GITLAB_RUNNER_VERSION=main
+ARG GITLAB_RUNNER_VERSION
 
 COPY --from=builder /gitlab-runner/out/binaries/gitlab-runner /usr/bin
 
