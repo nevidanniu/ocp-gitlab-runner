@@ -17,7 +17,7 @@ RUN dnf install -y git-core make go ncurses && \
 
 FROM registry.access.redhat.com/ubi8-micro:8.4
 
-ARG GITLAB_RUNNER_VERSION
+ARG GITLAB_RUNNER_VERSION=main
 
 COPY --from=builder /gitlab-runner/out/binaries/gitlab-runner /usr/bin
 
