@@ -1,4 +1,4 @@
-ARG GITLAB_RUNNER_VERSION=master
+ARG GITLAB_RUNNER_VERSION=main
 
 FROM registry.access.redhat.com/ubi8:8.4 AS builder
 
