@@ -2,7 +2,7 @@ ARG GITLAB_RUNNER_VERSION=main
 
 FROM registry.access.redhat.com/ubi8:8.4 AS builder
 
-ARG GITLAB_RUNNER_VERSION
+ARG GITLAB_RUNNER_VERSION=main
 
 #ENV GITLAB_REPO=https://gitlab.com/gitlab-org/gitlab-runner.git \
 ENV GITLAB_REPO=https://gitlab.com/nevidanniu/gitlab-runner.git \
